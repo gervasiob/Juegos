@@ -14,7 +14,8 @@ class CreateDatosTable extends Migration
     public function up()
     {
         Schema::create('datos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('data');
             $table->timestamps();
         });
     }

@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->name('inicio');
 });
 Route::post('webhook', 'WebhookController@handle');
+
+Route::get('datos', 'WebhookController@show');
 
